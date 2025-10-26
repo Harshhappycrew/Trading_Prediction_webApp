@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#143C8C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E5AB4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D8A0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00FFB8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#bgGrad)"/>
+
+  <!-- Trend line -->
+  <polyline points="12,50 20,38 28,42 36,30 44,26 52,20" 
+            fill="none" stroke="url(#lineGrad)" stroke-width="4" 
+            stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Arrow head -->
+  <polygon points="52,20 48,24 48,16" fill="#00E6B4"/>
+
+  <!-- Data points -->
+  <circle cx="28" cy="42" r="3" fill="white" stroke="#00E6B4" stroke-width="1.5"/>
+  <circle cx="36" cy="30" r="3" fill="white" stroke="#00E6B4" stroke-width="1.5"/>
+</svg>

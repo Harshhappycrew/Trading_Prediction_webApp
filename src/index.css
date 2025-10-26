@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 15% 8%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 15% 12%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 100% 56%;
+    --primary-foreground: 220 15% 8%;
+
+    --secondary: 220 15% 16%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 210 10% 60%;
+
+    --accent: 210 100% 56%;
+    --accent-foreground: 220 15% 8%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 210 20% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 15% 8%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 210 100% 56%;
+
+    --chart-1: 210 100% 56%;
+    --chart-2: 142 76% 36%;
+    --chart-3: 0 84% 60%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 280 100% 65%;
+
+    --radius: 0.5rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 56% / 0.2), hsl(280 100% 65% / 0.1));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36% / 0.2), hsl(142 76% 46% / 0.1));
+    --gradient-danger: linear-gradient(135deg, hsl(0 84% 60% / 0.2), hsl(0 84% 70% / 0.1));
+    
+    --shadow-glow: 0 0 30px hsl(210 100% 56% / 0.3);
+    --shadow-success: 0 0 20px hsl(142 76% 36% / 0.4);
+    --shadow-danger: 0 0 20px hsl(0 84% 60% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-success {
+    box-shadow: var(--shadow-success);
+  }
+  
+  .glow-danger {
+    box-shadow: var(--shadow-danger);
+  }
+
+  .animate-pulse-subtle {
+    animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-subtle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+}

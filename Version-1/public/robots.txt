@@ -1,0 +1,44 @@
+# QuantEdge - AI-Powered Trading Simulator
+# robots.txt for quantedge.com
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Allow all other bots
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://quantedge.com/sitemap.xml
+
+# Disallow admin and API endpoints (optional)
+# Disallow: /admin/
+# Disallow: /api/
