@@ -61,22 +61,44 @@ docker-compose up -d --build
 
 ### Backend Setup
 
+Note: For the full stack (TensorFlow, pandas, stable-baselines3, etc.) we recommend using Python 3.11.
+Some ML libraries and compiled extensions may not have prebuilt wheels for newer Python versions on Windows and can fail to build.
+
+Full install (recommended if you need ML features):
+
 ```bash
 cd backend
-
-# Create virtual environment
+# Create virtual environment (use Python 3.11 for best compatibility)
 python -m venv venv
-# On Windows:
-venv\Scripts\activate 
-#On Mac/Linux source venv/bin/activate  
+# On Windows activate:
+venv\Scripts\activate
+# On Mac/Linux:
+source venv/bin/activate
 
-# Install dependencies
+# Install full dependencies (may require build tools and compatible Python)
 pip install -r requirements.txt
 
 # Create directories
 mkdir -p data/raw data/processed data/models logs
 
 # Run the server
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+Lightweight local dev (fast path — no heavy ML builds):
+
+If you get compilation errors (commonly with pandas or TensorFlow) you can use the lightweight requirement set which excludes heavy ML packages. This lets you run the API and UI for development and testing while deferring full ML installs.
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate   # on Windows
+pip install -r requirements-lite.txt
+
+# Create directories
+mkdir -p data/raw data/processed data/models logs
+
+# Run the server (ML endpoints will be unavailable until full deps are installed)
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 

@@ -5,7 +5,7 @@ All prices in INR (₹)
 from fastapi import APIRouter, Query, HTTPException
 import yfinance as yf
 from typing import List, Dict
-from app.utils.currency import format_inr, indian_number_format
+from app.uitls.currency import format_inr, indian_number_format
 
 router = APIRouter()
 
