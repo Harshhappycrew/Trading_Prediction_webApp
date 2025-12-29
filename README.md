@@ -271,16 +271,27 @@ predictor = LSTMPredictor()
 
 ## 📝 License
 
-This project is for educational and portfolio purposes.
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing
 
-This is a portfolio project, but suggestions are welcome!
+This is primarily a portfolio project, but contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## ⚠️ Disclaimer
+
+**Educational Purpose Only**: This is a simulation tool for learning and portfolio demonstration. Do not use for actual trading without:
+- Proper risk assessment
+- Regulatory compliance
+- Extensive backtesting
+- Professional financial advice
+
 
 ## 📧 Contact
 
-For questions or collaboration, please reach out via GitHub.
+For questions, suggestions, or collaboration opportunities:
+- Open an issue on GitHub
+- Connect via GitHub profile
 
 ---
 
-**Note**: This is a simulation tool for educational purposes. Do not use for actual trading without proper risk assessment and testing.
+**Built with ❤️ as a portfolio project showcasing modern full-stack development**
